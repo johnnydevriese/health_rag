@@ -1,0 +1,40 @@
+[project]
+name = "health_rag"
+version = "0.1.0"
+description = "A RAG system for answering Medicare questions"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+dependencies = [
+    "anthropic>=0.18.1",
+    "chromadb>=0.4.24",
+    "fastapi>=0.110.0",
+    "python-dotenv>=1.0.1",
+    "uvicorn>=0.27.1",
+    "voyageai>=0.1.0",
+    "pydantic>=2.6.3",
+    "deepeval>=0.20.0",
+]
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto" 
